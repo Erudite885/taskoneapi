@@ -1,0 +1,18 @@
+{
+  "name": "mock-api-and-vite-react-frontend",
+  "version": "1.0.0",
+  "description": "Mock API and Vite React Frontend Example",
+  "scripts": {
+    "start-api": "prism mock -d api/applicationForm.yaml",
+    "start-client": "cd client && npm run dev",
+    "start": "concurrently \"npm run start-api\" \"npm run start-client\"",
+    "build-client": "cd client && vite build",
+    "lint-client": "cd client && eslint . --fix",
+    "test-client": "cd client && npm test",
+    "prettier-client": "cd client && prettier --write ."
+  },
+  "dependencies": {
+    "@stoplight/prism-cli": "^4.0.0",
+    "concurrently": "^6.3.0"
+  }
+}
